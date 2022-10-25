@@ -1,0 +1,132 @@
+html, body {
+    background: rgba(0, 0, 0, 0) linear-gradient(45deg, rgb(9, 14, 44) 0%, rgb(18, 44, 105) 58.93%, rgb(7, 141, 179) 100%) repeat scroll 0% 0%;
+    min-height : 100vh;
+    color : white;
+}
+
+.content {
+    position : relative;
+    top : 150px;
+}
+
+.heading-landing{
+  font-size : 24px;
+  font-weight : bold;
+}
+
+.success {
+    color : white;
+}
+
+.login-modal{
+    position : relative;
+    top : 30px;
+}
+
+.align-down{
+    margin-top : 26px;
+}
+
+.align-down-cabinet{
+    margin-top : 120px;
+}
+
+.align-down-cabinet{
+    margin-top : 20px;
+}
+
+.copyrights{
+    font-size : 25px;
+    font-weight : bold;
+}
+
+.container-lp{
+    margin-top : 19px;
+}
+
+.textsize {
+    font-size : 22px;
+}
+
+.button-bg_color {
+    background-color: black;
+}
+
+.login-section{
+  padding : 9px;
+  position : relative;
+  left : 50px;
+}
+
+.form-field{
+  margin-top : 80px;
+}
+
+.error-text {
+  font-size : 1.225em;
+  color : white;
+  padding : 0 1.1625em 1.1625em 2em;
+  min-height : 1.125em;
+  max-width : 32em;
+  display : inline;
+}
+
+.error-align {
+  margin-bottom: 40px;
+}
+
+.error-image{
+  background: url(formfield_error.svg) no-repeat;
+  background-image: url(formfield_error.svg);
+  background-size: 1.125em;
+}
+
+.submit-button{
+  margin-top : 52px;
+}
+
+.no-gutters{
+  text-align : right;
+  font-size : 26px;
+  font-weight : bold;
+}
+
+.no-gutters1{
+  text-align : left;
+  font-size : 24px;
+}
+
+.textbox {
+  background : rgba(255,255,255,.1);
+  height : 2em !important;
+  width : 20em;
+  margin : auto auto .75em;
+  border : 0 solid #94bbea;
+  border-bottom-width : 1px;
+  border-radius : 0 0 0 0;
+  color : white;
+}
+
+.login-btn {
+  height : 2.5em;
+  font-size : 1.125em;
+  border : 1px solid rgba(0,0,0,.5);
+  color : #5864ad;
+  border-color: #5846ad;
+  background-color: transparent;
+  border-radius : 1.25em;
+  padding : 0 2.25em;
+  margin-top : 0;
+}
+
+.login-btn:hover {
+  height : 2.5em;
+  font-size : 1.125em;
+  border : 1px solid rgba(0,0,0,.5);
+  color : #5864ad;
+  border-color: #5846ad;
+  background-color: white;
+  border-radius : 1.25em;
+  padding : 0 2.25em;
+  margin-top : 0;
+}
