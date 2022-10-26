@@ -76,8 +76,8 @@ html, body {
 }
 
 .error-image{
-  background: url(formfield_error.svg) no-repeat;
-  background-image: url(formfield_error.svg);
+  background: url(./public/formfield_error.svg) no-repeat;
+  background-image: url(./public/formfield_error.svg);
   background-size: 1.125em;
 }
 
