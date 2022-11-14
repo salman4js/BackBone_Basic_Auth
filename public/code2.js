@@ -3,6 +3,12 @@ var Credentials = Backbone.Model.extend({
   defaults : {
     username: '',
     password: ''
+  },
+  validate : function(attrs){
+    console.log(attrs.username.length)
+    if(attrs.username.length <= 5){
+      return "Username should not be lesser than 5 characters"
+    }
   }
 });
 
@@ -69,18 +75,24 @@ var LoginView = Backbone.View.extend({
           username : $('#username').val(),
           password : $('#password').val()
         });
-        ICollection.add(cred);
-        cred.save(null, {
-            success : function(){
-                console.log("User Logged In!");
-                var $button = $(e.target);
-                router.navigate($button.attr("data-url"), { trigger : true});
-            },
-            error : function(){
-                console.log("Invalid username and password!");
-                self.errorRender();
-            }
-        })
+        console.log(cred.isValid());
+        if(cred.isValid()){
+          ICollection.add(cred);
+          cred.save(null, {
+              success : function(){
+                  console.log("User Logged In!");
+                  var $button = $(e.target);
+                  router.navigate($button.attr("data-url"), { trigger : true});
+              },
+              error : function(){
+                  console.log("Invalid username and password!");
+                  self.errorRender();
+              }
+          })
+        } else {
+          console.log("Model validation has been triggered...");
+          self.invalidRender();
+        }
         //ICollection.add(cred);
         // var $button = $(e.target);
         // router.navigate($button.attr("data-url"), { trigger : true});
@@ -88,7 +100,11 @@ var LoginView = Backbone.View.extend({
     errorRender : function(){
         $('.error-align').html("<div class = 'error-text error-image'>You have entered an invalid user name or password. Please try again.</div>")
     },
-
+    
+    invalidRender : function(){
+      $('.error-align').html("<div class = 'error-text error-image'>Username must be greater than 5 characters.</div>")
+    },
+    
     render : function(){
         this.$el.html(this.template());
         return this;
